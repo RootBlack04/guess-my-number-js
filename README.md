@@ -10,6 +10,13 @@ I built it to practice DOM manipulation, event handling, and basic game logic.
 
 ---
 
+## 🚀 Live Version
+
+You can try the live version here:  
+[https://rootblack.site/guess-my-number-js/](https://rootblack.site/guess-my-number-js/)
+
+---
+
 ## 🚀 Demo
 Open `index.html` directly in your browser, or serve it with a simple static server.
 
