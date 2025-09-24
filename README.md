@@ -23,7 +23,7 @@ http-server .
 
 ```
 ---
-##🎮 How to Play
+🎮 How to Play
 
 Enter a number (1–20) in the input field.
 
