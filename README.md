@@ -35,13 +35,13 @@ Your score starts at 20 and decreases with each wrong guess.
 
 Click Again! to restart with a new secret number, and try to beat your highscore.
 
-##🧩 Tech Stack
+🧩 Tech Stack
 
 HTML, CSS
 
 Vanilla JavaScript (DOM)
 ---
-##📁 Files
+📁 Files
 
 index.html – structure and elements
 
@@ -49,7 +49,7 @@ style.css – styles (includes responsive tweaks for mobile)
 
 script1.js – game logic and DOM interactions
 
-##✅ Status
+✅ Status
 
 Basic desktop version complete.
 
@@ -63,7 +63,7 @@ git clone https://github.com/RootBlack04/guess-my-number-js.git
 cd guess-my-number-js
 # open index.html in your browser or use a local server
 ```
-##📜 License
+📜 License
 
 MIT — feel free to learn from it and adapt.
 Please keep the attribution to the original course author.
