@@ -9,17 +9,20 @@ const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-document.querySelector('.check').addEventListener('click', function () {
+const checkBtn = document.querySelector('.check');
+const againBtn = document.querySelector('.again');
+
+checkBtn.addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  // for log
+  // log guess
   console.log(typeof guess, guess);
-  // When there is no input
+
   if (!guess) {
     displayMessage('⛔ No number!');
   }
-  // when player win
+  // 🎉 الحالة ديال الفوز
   else if (guess === secretNumber) {
-    displayMessage('🎉 Correct Number!');
+    displayMessage('🎉 Correct Number! Click Again ⏩');
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secretNumber;
@@ -28,25 +31,30 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
+
+    // تعطيل check حتى يضغط again
+    checkBtn.disabled = true;
   }
-  // When guess is worn
+  // 📉 الحالة ديال الخطأ
   else if (guess !== secretNumber) {
     if (score > 1) {
       displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      displayMessage('👾 You lost the game!');
+      displayMessage('👾 You lost the game! Click Again ⏩');
       document.querySelector('.score').textContent = 0;
+
+      // تعطيل check حتى يضغط again
+      checkBtn.disabled = true;
     }
   }
 });
 
-document.querySelector('.again').addEventListener('click', function () {
+againBtn.addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  // for test:
-  console.log(`agin number : ${secretNumber}`);
+  console.log(`new number : ${secretNumber}`);
 
   displayMessage('Start guessing...');
   document.querySelector('.score').textContent = score;
@@ -54,4 +62,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
+
+  // إعادة تفعيل زر check
+  checkBtn.disabled = false;
 });

@@ -118,6 +118,14 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* disabled btn check */
+.check:disabled {
+  background-color: #555;   /* رمادي غامق */
+  color: #aaa;              /* نص باهت */
+  cursor: not-allowed;      /* مؤشر الفأرة ممنوع */
+  opacity: 0.6;             /* شفاف شوية */
+}
+
 /* ===== Mobile tweaks (append-only) ===== */
 
 /* Make layout stack on smaller screens */
